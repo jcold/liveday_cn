@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply hover:underline underline-offset-4;
+}
+
+.my-font-color{
+  color: #005b99 !important;
+}
+
+.number {
+  font-family: Cambria, "Times New Roman", Times, serif;
+}
+
+.link {
+  @apply text-blue-600 hover:text-blue-700;
+  // @include underline;
+}
+
+.common-tag-a {
+  a {
+    @apply underline-offset-4 hover:underline hover:text-blue-600;
+  }
+}
+
+.footer {
+  @apply absolute left-0 bottom-0 w-full flex flex-col justify-center;
+  height: 8rem;
+}
+
+.footer-nav {
+  a {
+    @apply text-black/80;
+    &:hover {
+      @apply underline underline-offset-4;
+    }
+
+    &:after {
+      content: " ·";
+    }
+
+    &:last-child:after {
+      content: "" !important;
+    }
+  }
+}
+
+.block-container {
+  @apply w-full max-w-screen-md mx-auto px-6 md:px-8 2xl:px-0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.body-container {
+  position: relative;
+  padding-bottom: 10rem; /* 留出footer高度，再多加两行 */
+  min-height: 100%;
+}
+
+.jingxuan {
+  @apply justify-between px-4 md:flex;
+  flex-flow: row wrap;
+  @screen md {
+    @apply px-0;
+  }
+
+  & > div {
+    // flex: 0 0 50%;
+    @screen md {
+      width: calc((100% - 1 * 1.5rem) / 2);
+    }
+    margin-bottom: 2rem;
+  }
+}
+
+
+.content-box{
+  p {
+    @apply my-6;
+  }
+}

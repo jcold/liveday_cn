@@ -1,0 +1,17 @@
+{% extends "_layout/main.html" %}
+{% import "_layout/blocks.html" as blocks %}
+{% set site = ds("_layout/source/site_info.toml") %}
+
+
+{% block body %}
+<div class="block-container space-y-6">
+    <h1 class="text-5xl font-bold mt-6">
+        <a href="/">
+            {{site.base.name}}
+        </a>
+    </h1>
+    <div class="text-lg text-black/90 yb-content2">
+        {{t("简介")}}
+    </div>
+</div>
+{% endblock body %}

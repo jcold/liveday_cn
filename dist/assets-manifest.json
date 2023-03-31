@@ -1,0 +1,16 @@
+{
+  "entrypoints": {
+    "main": {
+      "assets": {
+        "css": [
+          "assets/css/main.7da69d97.css"
+        ],
+        "js": [
+          "assets/js/main.7da69d97.js"
+        ]
+      }
+    }
+  },
+  "main.css": "assets/css/main.7da69d97.css",
+  "main.js": "assets/js/main.7da69d97.js"
+}

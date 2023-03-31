@@ -1,0 +1,65 @@
+{
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.svg",
+    "src/shims-vue.d.ts"
+  ],
+  "compilerOptions": {
+    // 指定基础目录
+    "baseUrl": "./",
+    // 输出目录
+    "outDir": "./ts-built/",
+    // 是相对于"baseUrl"进行解析
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@icon/*": [
+        "src/assets/svg-icon/*"
+      ]
+    },
+    // 添加需要的解析的语法，否则TS会检测出错。
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost",
+      "ES2015",
+      "ES2015.Promise",
+      "ES2015.Generator"
+    ],
+    // 编译目标平台
+    "target": "esnext",
+    // 指定生成哪个模块系统代码
+    "module": "esnext",
+    // 模块的解析
+    "moduleResolution": "node",
+    // 在表达式和声明上有隐含的any类型时报错
+    "noImplicitAny": false,
+    // 把 ts 文件编译成 js 文件的时候，同时生成对应的 map 文件
+    "sourceMap": true,
+    // 允许编译javascript文件
+    "allowJs": true,
+    // 启用装饰器
+    "experimentalDecorators": true,
+    // 移除注释
+    "removeComments": true,
+    // 这可以对 `this` 上的数据 property 进行更严格的推断
+    "strict": true,
+    "pretty": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    "types": [
+      "webpack-env",
+      "jest",
+      "chrome"
+    ]
+  }
+}

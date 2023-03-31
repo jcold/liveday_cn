@@ -1,0 +1,3 @@
+# 中医资源
+
+从[kanzy.cn](https://kanzy.cn)开始……
